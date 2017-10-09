@@ -8,7 +8,7 @@ matrix:
     - os: osx
       osx_image: xcode9
 before_install:
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then rvm use 2.3.1; ulimit -n 1024; fi
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ulimit -n 1024; fi
 before_script:
   - make build
 script:
