@@ -1,0 +1,13 @@
+image: Visual Studio 2017
+environment:
+  PROJECT_FILE: ./NinetyNineProblems/NinetyNineProblems.csproj
+  TEST_PROJECT_FILE: ./NinetyNineProblems.Tests/NinetyNineProblems.Tests.csproj
+  CODECOV_REPO_TOKEN:
+    secure: qPcEwJEfV9dJCq+uvSkanCK0t1BUfLxO+aZd4Rw0Rva2P5AYsMuPgUO3L0WdKfWP
+build_script:
+  - cmd: dotnet build %PROJECT_FILE%
+  - cmd: dotnet build %TEST_PROJECT_FILE%
+test_script:
+  - cmd: dotnet test %TEST_PROJECT_FILE%
+  - bash coverage.sh
+  - bash codecov.sh
