@@ -8,15 +8,15 @@ namespace NinetyNineProblems.Tests.Lists
     public class P01Test
     {
         [Fact]
-        public void Return1()
+        public void Return4()
         {
-            Assert.Equal(1, P01.MyLast(new List<int> { 5, 4, 3, 2, 1 }));
+            Assert.Equal(4, P01.MyLast(new List<int> { 1, 2, 3, 4 }));
         }
 
         [Fact]
-        public void ReturnWorld()
+        public void ReturnZ()
         {
-            Assert.Equal("World", P01.MyLast(new List<string> { "Hello", "World" }));
+            Assert.Equal("z", P01.MyLast(new List<string> { "x", "y", "z" }));
         }
 
         [Fact]

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using NinetyNineProblems.Lists;
 using Xunit;
 
@@ -8,15 +9,20 @@ namespace NinetyNineProblems.Tests.Lists
     public class P03Test
     {
         [Fact]
-        public void Return3()
+        public void Return2()
         {
-            Assert.Equal(3, P03.ElementAt(new List<int> { 5, 4, 3, 2, 1 }, 3));
+            Assert.Equal(2, P03.ElementAt(new List<int> { 1, 2, 3 }, 2));
         }
 
         [Fact]
-        public void ReturnWorld()
+        public void ReturnR()
         {
-            Assert.Equal("World", P03.ElementAt(new List<string> { "Hello", "World" }, 2));
+            var list = "csharp".ToCharArray()
+                .OfType<char>()
+                .Select(c => c.ToString())
+                .ToList();
+
+            Assert.Equal("r", P03.ElementAt(list, 5));
         }
 
         [Fact]
