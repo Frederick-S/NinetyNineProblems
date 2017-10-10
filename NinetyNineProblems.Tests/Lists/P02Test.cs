@@ -9,13 +9,13 @@ namespace NinetyNineProblems.Tests.Lists
     public class P02Test
     {
         [Fact]
-        public void Return3()
+        public void ShouldReturn3()
         {
             Assert.Equal(3, P02.MyButLast(new List<int> { 1, 2, 3, 4 }));
         }
 
         [Fact]
-        public void ReturnY()
+        public void ShouldReturnY()
         {
             var list = Enumerable.Range(0, 26)
                 .Select(i => Convert.ToChar('a' + i).ToString())
@@ -25,7 +25,7 @@ namespace NinetyNineProblems.Tests.Lists
         }
 
         [Fact]
-        public void ThrowArgumentOutOfRangeException()
+        public void ShouldThrowArgumentOutOfRangeException()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => P02.MyButLast<int>(new List<int> { 1 }));
         }

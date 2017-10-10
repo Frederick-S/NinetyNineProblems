@@ -9,7 +9,7 @@ namespace NinetyNineProblems.Tests.Lists
     public class P05Test
     {
         [Fact]
-        public void ReturnReversedList()
+        public void ShouldReturnReversedList()
         {
             var list = "A man, a plan, a canal, panama!".ToCharArray()
                 .OfType<char>()

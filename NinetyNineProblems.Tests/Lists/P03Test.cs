@@ -9,13 +9,13 @@ namespace NinetyNineProblems.Tests.Lists
     public class P03Test
     {
         [Fact]
-        public void Return2()
+        public void ShouldReturn2()
         {
             Assert.Equal(2, P03.ElementAt(new List<int> { 1, 2, 3 }, 2));
         }
 
         [Fact]
-        public void ReturnR()
+        public void ShouldReturnR()
         {
             var list = "csharp".ToCharArray()
                 .OfType<char>()
@@ -26,7 +26,7 @@ namespace NinetyNineProblems.Tests.Lists
         }
 
         [Fact]
-        public void ThrowArgumentOutOfRangeException()
+        public void ShouldThrowArgumentOutOfRangeException()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => P03.ElementAt<int>(new List<int> { 1 }, 2));
         }

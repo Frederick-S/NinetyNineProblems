@@ -9,13 +9,13 @@ namespace NinetyNineProblems.Tests.Lists
     public class P04Test
     {
         [Fact]
-        public void Return3()
+        public void ShouldReturn3()
         {
             Assert.Equal(3, P04.MyLength(new List<int> { 123, 456, 789 }));
         }
 
         [Fact]
-        public void Return13()
+        public void ShouldReturn13()
         {
             var list = "Hello, world!".ToCharArray()
                 .OfType<char>()

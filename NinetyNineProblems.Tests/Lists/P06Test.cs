@@ -9,13 +9,13 @@ namespace NinetyNineProblems.Tests.Lists
     public class P06Test
     {
         [Fact]
-        public void ReturnFalse()
+        public void ShouldReturnFalse()
         {
             Assert.False(P06.IsPalindrome(new List<int> { 1, 2, 3 }));
         }
 
         [Fact]
-        public void ReturnTrue()
+        public void ShouldReturnTrue()
         {
             var list = "madamimadam".ToCharArray()
                 .OfType<char>()
