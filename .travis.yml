@@ -7,6 +7,8 @@ matrix:
       dist: trusty
     - os: osx
       osx_image: xcode9
+rvm:
+  - 2.3.1
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then ulimit -n 1024; fi
 before_script:
