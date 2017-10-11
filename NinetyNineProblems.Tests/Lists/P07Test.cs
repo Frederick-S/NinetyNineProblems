@@ -13,5 +13,11 @@ namespace NinetyNineProblems.Tests.Lists
 
             Assert.Equal(new List<object> { 1, 2, 3, 4, 5 }, P07.Flatten(list));
         }
+
+        [Fact]
+        public void ShouldReturnAnEmptyList()
+        {
+            Assert.Equal(new List<object>(), P07.Flatten(new List<object>()));
+        }
     }
 }
