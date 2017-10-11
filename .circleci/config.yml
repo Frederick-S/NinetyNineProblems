@@ -6,5 +6,6 @@ jobs:
       - image: microsoft/dotnet:sdk
     steps:
       - checkout
+      - run: apt-get install make
       - run: make build
       - run: make test
