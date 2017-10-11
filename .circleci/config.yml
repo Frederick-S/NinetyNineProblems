@@ -7,6 +7,6 @@ jobs:
     steps:
       - checkout
       - run: apt-get update
-      - run: apt-get install build-essential
+      - run: apt-get install -y make
       - run: make build
       - run: make test
