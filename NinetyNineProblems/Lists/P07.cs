@@ -1,21 +1,22 @@
 using System.Collections.Generic;
 using System.Linq;
+using NinetyNineProblems.Lists.Helpers;
 
 namespace NinetyNineProblems.Lists
 {
     public class P07
     {
-        public static List<object> Flatten(List<object> list)
+        public static List<T> Flatten<T>(List<NestedListElement<T>> list)
         {
             return list.SelectMany(x =>
                 {
-                    if (x is List<object>)
+                    if (x.ListValue != null)
                     {
-                        return Flatten(x as List<object>);
+                        return Flatten(x.ListValue as List<NestedListElement<T>>);
                     }
                     else
                     {
-                        return new List<object> { x };
+                        return new List<T> { x.Value };
                     }
                 })
                 .ToList();
