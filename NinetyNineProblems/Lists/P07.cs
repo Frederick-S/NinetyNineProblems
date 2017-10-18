@@ -12,7 +12,7 @@ namespace NinetyNineProblems.Lists
                 {
                     if (x.ListValue != null)
                     {
-                        return Flatten(x.ListValue as List<NestedListElement<T>>);
+                        return Flatten(x.ListValue);
                     }
                     else
                     {
