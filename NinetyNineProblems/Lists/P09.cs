@@ -10,7 +10,7 @@ namespace NinetyNineProblems.Lists
             return PackInternal(list, 0);
         }
 
-        public static List<List<T>> PackInternal<T>(List<T> list, int index)
+        private static List<List<T>> PackInternal<T>(List<T> list, int index)
         {
             if (index == list.Count)
             {

@@ -10,7 +10,7 @@ namespace NinetyNineProblems.Lists
             return CompressInternal(list, 0);
         }
 
-        public static List<T> CompressInternal<T>(List<T> list, int index)
+        private static List<T> CompressInternal<T>(List<T> list, int index)
         {
             if (index == list.Count)
             {
