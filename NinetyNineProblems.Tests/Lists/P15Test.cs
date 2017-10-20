@@ -7,7 +7,7 @@ namespace NinetyNineProblems.Tests.Lists
     public class P15Test
     {
         [Fact]
-        public void ShouldReturnReplicatedList()
+        public void ShouldReplicateEveryElementThreeTimes()
         {
             var list = new List<char> { 'a', 'b', 'c' };
             var expectedList = new List<char> { 'a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'c' };

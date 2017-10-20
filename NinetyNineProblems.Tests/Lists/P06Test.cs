@@ -8,13 +8,13 @@ namespace NinetyNineProblems.Tests.Lists
     public class P06Test
     {
         [Fact]
-        public void ShouldReturnFalse()
+        public void ShouldReturnFalseForNonPalindromeList()
         {
             Assert.False(P06.IsPalindrome(new List<int> { 1, 2, 3 }));
         }
 
         [Fact]
-        public void ShouldReturnTrue()
+        public void ShouldReturnTrueForPalindromeList()
         {
             var list = "madamimadam".ToCharArray()
                 .OfType<char>()

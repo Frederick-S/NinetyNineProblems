@@ -7,7 +7,7 @@ namespace NinetyNineProblems.Tests.Lists
     public class P17Test
     {
         [Fact]
-        public void ShouldReturnSplittedList()
+        public void ShouldSplitListToTwoParts()
         {
             var list = new List<char> { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k' };
             var expectedList = new List<List<char>>

@@ -7,7 +7,7 @@ namespace NinetyNineProblems.Tests.Lists
     public class P09Test
     {
         [Fact]
-        public void ShouldReturnPackedList()
+        public void ShouldPackConsecutiveDuplicatesToSubLists()
         {
             var list = new List<char> { 'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e' };
             var expectedList = new List<List<char>>

@@ -8,7 +8,7 @@ namespace NinetyNineProblems.Tests.Lists
     public class P08Test
     {
         [Fact]
-        public void ShouldReturnCompressedList()
+        public void ShouldEliminateConsecutiveDuplicates()
         {
             var list = "aaaabccaadeeee".ToCharArray()
                 .OfType<char>()
