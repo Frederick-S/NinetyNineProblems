@@ -10,7 +10,9 @@ namespace NinetyNineProblems.Lists
         {
             Random random = new Random();
 
-            return Enumerable.Range(1, n).Select(i => list[random.Next(0, list.Count)]).ToList();
+            return Enumerable.Range(1, n)
+                .Select(i => list[random.Next(0, list.Count)])
+                .ToList();
         }
     }
 }
