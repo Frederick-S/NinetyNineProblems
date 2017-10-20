@@ -9,8 +9,14 @@ namespace NinetyNineProblems.Tests.Lists
         [Fact]
         public void ShouldDrawSixDifferentRandomNumbersFromOneToFortyNine()
         {
-            var aaa = P24.RndSelect(6, 49);
-            Assert.Equal(6, P24.RndSelect(6, 49).Count);
+            var list = P24.RndSelect(6, 49);
+
+            Assert.Equal(6, list.Count);
+
+            foreach (int i in list)
+            {
+                Assert.True(1 <= 1 && i <= 49);
+            }
         }
     }
 }
