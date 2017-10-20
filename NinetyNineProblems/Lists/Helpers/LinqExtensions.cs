@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace NinetyNineProblems.Lists.Helpers
 {
-    public static class GroupWhileHelper
+    public static class LinqExtensions
     {
         public static IEnumerable<IEnumerable<T>> GroupWhile<T>(this IEnumerable<T> source, Func<T, T, bool> predicate)
         {
