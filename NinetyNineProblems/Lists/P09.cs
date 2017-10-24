@@ -20,9 +20,9 @@ namespace NinetyNineProblems.Lists
             {
                 var left = PackInternal(list, index + 1);
 
-                return Enumerable.Range(0, left.Count).Select(i =>
+                return left.Select((x, i) =>
                     {
-                        return i == 0 ? new List<T> { list[index] }.Concat(left[0]).ToList() : left[i];
+                        return i == 0 ? new List<T> { list[index] }.Concat(left[0]).ToList() : x;
                     }).ToList();
             }
             else
