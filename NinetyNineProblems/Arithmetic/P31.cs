@@ -1,5 +1,3 @@
-using System.Linq;
-
 namespace NinetyNineProblems.Arithmetic
 {
     public class P31
@@ -19,16 +17,12 @@ namespace NinetyNineProblems.Arithmetic
                 return false;
             }
 
-            int i = 5;
-
-            while (i * i <= n)
+            for (int i = 5; i * i <= n; i += 6)
             {
                if (n % i == 0 || n % (i + 2) == 0)
                {
                    return false;
                }
-
-               i++;
             }
 
             return true;
