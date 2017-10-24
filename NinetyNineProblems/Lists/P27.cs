@@ -11,10 +11,10 @@ namespace NinetyNineProblems.Lists
         {
             Debug.Assert(list.Count == sizes.Item1 + sizes.Item2 + sizes.Item3, "List count should equal to sizes");
 
-            return (from p1 in P26.Combinations(list, sizes.Item1)
-                    from p2 in P26.Combinations(list.Except(p1).ToList(), sizes.Item2)
-                    from p3 in P26.Combinations(list.Except(p1.Concat(p2)).ToList(), sizes.Item3)
-                    select new List<List<T>> { p1, p2, p3 }).ToList();
+            return (from c1 in P26.Combinations(list, sizes.Item1)
+                    from c2 in P26.Combinations(list.Except(c1).ToList(), sizes.Item2)
+                    from c3 in P26.Combinations(list.Except(c1.Concat(c2)).ToList(), sizes.Item3)
+                    select new List<List<T>> { c1, c2, c3 }).ToList();
         }
     }
 }
