@@ -9,7 +9,7 @@ namespace NinetyNineProblems.Lists
     {
         public static List<LengthEncodingElement<T>> EncodeDirect<T>(List<T> list)
         {
-            return list.GroupWhile((previous, next) => previous.Equals(next))
+            return list.GroupWhile((previous, current) => previous.Equals(current))
                 .Select(x =>
                 {
                     if (x.Count() == 1)
