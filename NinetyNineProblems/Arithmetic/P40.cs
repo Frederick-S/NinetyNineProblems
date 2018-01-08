@@ -16,7 +16,9 @@ namespace NinetyNineProblems.Arithmetic
             HashSet<int> primesSet1 = new HashSet<int>(primes);
             HashSet<int> primesSet2 = new HashSet<int>(primes);
 
-            return primesSet1.Where(i => primesSet2.Contains(n - i) && i <= n - i).Select(i => Tuple.Create(i, n - i)).ToList();
+            return primesSet1.Where(i => primesSet2.Contains(n - i) && i <= n - i)
+                .Select(i => Tuple.Create(i, n - i))
+                .ToList();
         }
     }
 }

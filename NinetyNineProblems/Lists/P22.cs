@@ -7,7 +7,8 @@ namespace NinetyNineProblems.Lists
     {
         public static List<int> Range(int start, int end)
         {
-            return Enumerable.Range(start, end - start + 1).ToList();
+            return Enumerable.Range(start, end - start + 1)
+                .ToList();
         }
     }
 }

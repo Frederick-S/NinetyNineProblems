@@ -7,7 +7,8 @@ namespace NinetyNineProblems.Lists
     {
         public static List<T> Dupli<T>(List<T> list)
         {
-            return list.SelectMany(x => Enumerable.Repeat(x, 2)).ToList();
+            return list.SelectMany(x => Enumerable.Repeat(x, 2))
+                .ToList();
         }
     }
 }

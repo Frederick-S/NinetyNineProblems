@@ -14,7 +14,9 @@ namespace NinetyNineProblems.Arithmetic
                 return 1;
             }
 
-            return Enumerable.Range(1, m - 1).Where(i => P33.Coprime(i, m)).Count();
+            return Enumerable.Range(1, m - 1)
+                .Where(i => P33.Coprime(i, m))
+                .Count();
         }
     }
 }

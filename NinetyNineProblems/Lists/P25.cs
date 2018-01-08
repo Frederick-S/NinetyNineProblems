@@ -10,7 +10,8 @@ namespace NinetyNineProblems.Lists
         {
             Random random = new Random();
 
-            return list.OrderBy(x => random.Next()).ToList();
+            return list.OrderBy(x => random.Next())
+                .ToList();
         }
     }
 }

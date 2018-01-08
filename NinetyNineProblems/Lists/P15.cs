@@ -7,7 +7,8 @@ namespace NinetyNineProblems.Lists
     {
         public static List<T> Repli<T>(List<T> list, int count)
         {
-            return list.SelectMany(x => Enumerable.Repeat(x, count)).ToList();
+            return list.SelectMany(x => Enumerable.Repeat(x, count))
+                .ToList();
         }
     }
 }

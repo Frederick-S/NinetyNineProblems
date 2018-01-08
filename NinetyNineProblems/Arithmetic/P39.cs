@@ -10,7 +10,9 @@ namespace NinetyNineProblems.Arithmetic
         {
             Debug.Assert(m <= n, "m should be smaller than n");
 
-            return Enumerable.Range(m, n - m + 1).Where(x => P31.IsPrime(x)).ToList();
+            return Enumerable.Range(m, n - m + 1)
+                .Where(x => P31.IsPrime(x))
+                .ToList();
         }
     }
 }

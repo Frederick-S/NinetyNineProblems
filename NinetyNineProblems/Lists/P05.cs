@@ -24,7 +24,8 @@ namespace NinetyNineProblems.Lists
             var part1 = MyReverse2(list.GetRange(0, middle));
             var part2 = MyReverse2(list.GetRange(middle, list.Count - middle));
 
-            return part2.Concat(part1).ToList();
+            return part2.Concat(part1)
+                .ToList();
         }
     }
 }
