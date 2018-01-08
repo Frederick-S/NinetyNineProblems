@@ -15,7 +15,7 @@ namespace NinetyNineProblems.Tests.Lists
 
             foreach (var c in list)
             {
-                Assert.True(list.Contains(c));
+                Assert.Contains(c, list);
             }
         }
     }
