@@ -7,30 +7,26 @@ namespace NinetyNineProblems.Arithmetic
 {
     public class P40
     {
-        public static Tuple<int, int> GoldbachConjecture(int n)
+        public static List<Tuple<int, int>> GoldbachConjecture(int n)
         {
             Debug.Assert(n > 2 && n % 2 == 0, "n must be a positive even number greater than 2");
 
             List<int> primes = Enumerable.Range(3, n - 3).Where(i => P31.IsPrime(i)).ToList();
             List<int> primes2 = primes.Select(i => i).ToList();
 
-            return TwoSum(primes, primes2, n);
-        }
+            HashSet<int> primesSet1 = new HashSet<int>(primes);
+            HashSet<int> primesSet2 = new HashSet<int>(primes2);
+            List<Tuple<int, int>> groups = new List<Tuple<int, int>>();
 
-        private static Tuple<int, int> TwoSum(List<int> numbers1, List<int> numbers2, int sum)
-        {
-            HashSet<int> numberSet1 = new HashSet<int>(numbers1);
-            HashSet<int> numberSet2 = new HashSet<int>(numbers2);
-
-            foreach (int n in numberSet1)
+            foreach (int number in primesSet1)
             {
-                if (numberSet2.Contains(sum - n))
+                if (primesSet2.Contains(n - number) && number <= n - number)
                 {
-                    return Tuple.Create(n, sum - n);
+                    groups.Add(Tuple.Create(number, n - number));
                 }
             }
 
-            return Tuple.Create(-1, -1);
+            return groups;
         }
     }
 }
