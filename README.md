@@ -2,7 +2,7 @@
 
 .NET core translations of [Ninety-Nine Haskell Problems](https://wiki.haskell.org/99_questions).
 
-## Tests
+## Run Tests
 ```
 make test
 ```
