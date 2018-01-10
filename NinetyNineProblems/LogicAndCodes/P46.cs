@@ -8,7 +8,8 @@ namespace NinetyNineProblems.LogicAndCodes
     {
         public static List<Tuple<bool, bool, bool>> Table(Func<bool, bool, bool> expression)
         {
-            List<Tuple<bool, bool>> combinations = (from a in new List<bool> { true, false }
+            List<Tuple<bool, bool>> combinations = (
+                from a in new List<bool> { true, false }
                 from b in new List<bool> { true, false }
                 select Tuple.Create(a, b)).ToList();
 
