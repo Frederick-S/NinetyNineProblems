@@ -25,5 +25,30 @@ namespace NinetyNineProblems.LogicAndCodes
         {
             return a || b;
         }
+
+        public static bool Nand(bool a, bool b)
+        {
+            return !(a && b);
+        }
+
+        public static bool Nor(bool a, bool b)
+        {
+            return !(a || b);
+        }
+
+        public static bool Xor(bool a, bool b)
+        {
+            return a ^ b;
+        }
+
+        public static bool Impl(bool a, bool b)
+        {
+            return !a || b;
+        }
+
+        public static bool Equ(bool a, bool b)
+        {
+            return a == b;
+        }
     }
 }
