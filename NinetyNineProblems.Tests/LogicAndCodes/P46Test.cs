@@ -39,6 +39,16 @@ namespace NinetyNineProblems.Tests.LogicAndCodes
             };
 
             Assert.Equal(expectedList, P46.Table((bool a, bool b) => { return P46.Xor(a, P46.Impl(a, b)); }));
+
+            expectedList = new List<Tuple<bool, bool, bool>>
+            {
+                Tuple.Create(true, true, true),
+                Tuple.Create(true, false, false),
+                Tuple.Create(false, true, true),
+                Tuple.Create(false, false, true),
+            };
+
+            Assert.Equal(expectedList, P46.Table((bool a, bool b) => { return P46.Impl(a, P46.Equ(a, b)); }));
         }
     }
 }
