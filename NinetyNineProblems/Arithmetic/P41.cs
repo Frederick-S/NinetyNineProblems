@@ -8,7 +8,7 @@ namespace NinetyNineProblems.Arithmetic
     {
         public static List<Tuple<int, int>> GoldbachList(int m, int n)
         {
-            List<int> evenNumbers = Enumerable.Range(m, n - m + 1).Where(i => i % 2 == 0).ToList();
+            var evenNumbers = Enumerable.Range(m, n - m + 1).Where(i => i % 2 == 0).ToList();
 
             return evenNumbers.Select(i => P40.GoldbachConjecture(i))
                 .SelectMany(list => list)

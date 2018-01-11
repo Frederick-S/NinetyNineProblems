@@ -7,7 +7,7 @@ namespace NinetyNineProblems.Arithmetic
     {
         public static List<int> PrimeFactors(int n)
         {
-            List<int> primeFactors = new List<int>();
+            var primeFactors = new List<int>();
 
             for (int i = 2; i <= (int)Math.Sqrt(n); i++)
             {

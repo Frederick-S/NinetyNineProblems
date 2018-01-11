@@ -10,7 +10,7 @@ namespace NinetyNineProblems.Tests.Arithmetic
         [Fact]
         public void ShouldReturnPrimePairs()
         {
-            List<Tuple<int, int>> expectedList = new List<Tuple<int, int>>
+            var expectedList = new List<Tuple<int, int>>
             {
                  Tuple.Create(3, 7),
                  Tuple.Create(5, 5),

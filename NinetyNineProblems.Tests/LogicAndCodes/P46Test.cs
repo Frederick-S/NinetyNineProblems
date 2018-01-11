@@ -10,7 +10,7 @@ namespace NinetyNineProblems.Tests.LogicAndCodes
         [Fact]
         public void ShouldReturnTruthTable()
         {
-            List<Tuple<bool, bool, bool>> expectedList = new List<Tuple<bool, bool, bool>>
+            var expectedList = new List<Tuple<bool, bool, bool>>
             {
                 Tuple.Create(true, true, true),
                 Tuple.Create(true, false, true),

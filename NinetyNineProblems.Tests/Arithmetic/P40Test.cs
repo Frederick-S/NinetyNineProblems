@@ -10,7 +10,7 @@ namespace NinetyNineProblems.Tests.Arithmetic
         [Fact]
         public void ShouldReturnPrimePairs()
         {
-            List<Tuple<int, int>> expectedList = new List<Tuple<int, int>> { Tuple.Create(5, 23), Tuple.Create(11, 17) };
+            var expectedList = new List<Tuple<int, int>> { Tuple.Create(5, 23), Tuple.Create(11, 17) };
 
             Assert.Equal(expectedList, P40.GoldbachConjecture(28));
         }
