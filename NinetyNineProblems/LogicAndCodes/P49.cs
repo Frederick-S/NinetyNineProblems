@@ -12,7 +12,12 @@ namespace NinetyNineProblems.LogicAndCodes
                 return new List<string> { "0", "1" };
             }
 
-            return (from a in Gray(1) from b in Gray(n - 1) select a + b).ToList();
+            var list = Gray(n - 1);
+            var reversed = new List<string>(list);
+
+            reversed.Reverse();
+
+            return Enumerable.Concat(list.Select(x => "0" + x).ToList(), new List<string>(reversed).Select(x => "1" + x).ToList()).ToList();
         }
     }
 }
